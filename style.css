@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.spinner{
+    background-color: blue;
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+margin-top: 300px;
+margin-left: 900px;
+position: relative;
+animation-duration: 3s;
+animation-name: spin;
+animation-timing-function: linear;
+animation-delay: 1s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-play-state: running;
+}
+
+.spinner:hover{
+    animation-play-state: paused;
+}
+
+h1{
+    color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+top: 100px;
+}
+
+
+@keyframes spin {
+    0%{
+
+    }
+    50%{
+        scale: 2;
+        transform: rotate(0);
+        border-radius: 0;
+    }
+    100%{
+        transform: rotate(360deg);
+        border-radius: 50%;
+        scale: 2;
+    }
+}
